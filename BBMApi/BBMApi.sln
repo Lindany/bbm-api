@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBMApi", "BBMApi.csproj", "{863DCCAC-F0F8-46A3-A591-6B729C870601}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{863DCCAC-F0F8-46A3-A591-6B729C870601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{863DCCAC-F0F8-46A3-A591-6B729C870601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{863DCCAC-F0F8-46A3-A591-6B729C870601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{863DCCAC-F0F8-46A3-A591-6B729C870601}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {074694F6-FDB3-4A7C-AB66-4CE9C9228950}
+	EndGlobalSection
+EndGlobal
