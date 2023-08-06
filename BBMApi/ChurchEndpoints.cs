@@ -34,7 +34,6 @@ public static class ChurchEndpoints
             var affected = await db.Church
                 .Where(model => model.churchId == churchid)
                 .ExecuteUpdateAsync(setters => setters
-                  .SetProperty(m => m.churchId, church.churchId)
                   .SetProperty(m => m.churchName, church.churchName)
                   .SetProperty(m => m.location, church.location)
                   .SetProperty(m => m.branch, church.branch)

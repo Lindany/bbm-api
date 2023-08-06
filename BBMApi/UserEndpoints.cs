@@ -34,7 +34,6 @@ public static class UserEndpoints
             var affected = await db.User
                 .Where(model => model.userId == userid)
                 .ExecuteUpdateAsync(setters => setters
-                  .SetProperty(m => m.userId, user.userId)
                   .SetProperty(m => m.role, user.role)
                   .SetProperty(m => m.username, user.username)
                   .SetProperty(m => m.password, user.password)

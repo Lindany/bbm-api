@@ -34,7 +34,6 @@ public static class PersonEndpoints
             var affected = await db.Person
                 .Where(model => model.personId == personid)
                 .ExecuteUpdateAsync(setters => setters
-                  .SetProperty(m => m.personId, person.personId)
                   .SetProperty(m => m.address, person.address)
                   .SetProperty(m => m.comments, person.comments)
                   .SetProperty(m => m.contactNumber, person.contactNumber)

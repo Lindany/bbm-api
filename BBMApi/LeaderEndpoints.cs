@@ -34,7 +34,6 @@ public static class LeaderEndpoints
             var affected = await db.Leader
                 .Where(model => model.leaderId == leaderid)
                 .ExecuteUpdateAsync(setters => setters
-                  .SetProperty(m => m.leaderId, leader.leaderId)
                   .SetProperty(m => m.ministry, leader.ministry)
                   .SetProperty(m => m.office, leader.office)
                   .SetProperty(m => m.personId, leader.personId)

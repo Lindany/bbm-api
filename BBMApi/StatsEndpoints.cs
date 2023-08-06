@@ -34,7 +34,6 @@ public static class StatsEndpoints
             var affected = await db.Stats
                 .Where(model => model.statsId == statsid)
                 .ExecuteUpdateAsync(setters => setters
-                  .SetProperty(m => m.statsId, stats.statsId)
                   .SetProperty(m => m.adult, stats.adult)
                   .SetProperty(m => m.car, stats.car)
                   .SetProperty(m => m.fk, stats.fk)
