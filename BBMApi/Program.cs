@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using BBMApi.Data;
+using BBMApi;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<BBMApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BBMApiContext") ?? throw new InvalidOperationException("Connection string 'BBMApiContext' not found.")));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -35,6 +41,16 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+app.MapChurchEndpoints();
+
+app.MapLeaderEndpoints();
+
+app.MapPersonEndpoints();
+
+app.MapUserEndpoints();
+
+app.MapStatsEndpoints();
 
 app.Run();
 
