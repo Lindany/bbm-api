@@ -23,11 +23,11 @@ jobs:
           include-prerelease: true
           
       - name: Change directory to BBMApi
-        run: cd BBMApi
+        run: cd ./BBMApi
         
       - name: Build with dotnet
         run: |
-          cd BBMApi
+          cd ./BBMApi
           dotnet build --configuration Release
           dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
@@ -54,7 +54,7 @@ jobs:
           name: .net-app
           
       - name: Change directory to BBMApi
-        run: cd BBMApi
+        run: cd ./BBMApi
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
